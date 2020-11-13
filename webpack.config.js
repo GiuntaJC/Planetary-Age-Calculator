@@ -9,7 +9,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'Planetary Age Calculator',
       template: './src/index.html',
       inject: 'body'
     })

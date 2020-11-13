@@ -1,5 +1,5 @@
 {
-  "name": "Planetary Age Calculator",
+  "name": "Planetary-Age-Calculator",
   "version": "1.0.0",
   "description": "This program takes the user's age and life expectancy, and returns the same in the solar years of other planets",
   "main": "main.js",
