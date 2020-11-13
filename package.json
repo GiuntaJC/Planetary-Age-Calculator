@@ -1,12 +1,17 @@
 {
   "name": "Planetary Age Calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "This program takes the user's age and life expectancy, and returns the same in the solar years of other planets",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Joseph C Giunta",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.8"
+  }
 }
