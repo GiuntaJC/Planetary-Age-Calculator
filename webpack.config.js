@@ -1,15 +1,26 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // new line
 
 module.exports = {
+	entry: './src/main.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'eval-source-map',  // new line
+  devServer: {                 // new line
+    contentBase: './dist'      // new line
+  },
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
+    new CleanWebpackPlugin(), // new line
     new HtmlWebpackPlugin({
-      title: 'Planetary Age Calculator',
+      title: 'Shape Tracker',
       template: './src/index.html',
       inject: 'body'
     })
