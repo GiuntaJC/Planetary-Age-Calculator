@@ -5,16 +5,19 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack --mode development"
-	"start": "npm run build & webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "Joseph C Giunta",
   "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "eslint-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "4.39.3",
     "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "eslint": "^6.3.0"
   }
 }
