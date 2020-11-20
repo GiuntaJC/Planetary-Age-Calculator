@@ -25,7 +25,7 @@ module.exports = {
       inject: 'body'
     })
   ],
-  module: {
+  module = {
     rules: [
       {
         test: /\.css$/,
@@ -36,7 +36,7 @@ module.exports = {
       }
     ]
   }
-  module: {
+  module = {
     rules: [
       {
         test: /\.css$/,
