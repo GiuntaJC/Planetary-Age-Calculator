@@ -40,4 +40,16 @@ export default class planets {
     return marsExpectancy;
   }
 
+  getJupiterAge() {
+    let jupiterAge = this.inputAge/11.86;
+    jupiterAge = parseFloat(jupiterAge.toFixed(2));
+    return jupiterAge;
+  }
+
+  getJupiterExpectancy() {
+    let jupiterExpectancy = this.inputExpectancy/11.86;
+    jupiterExpectancy = parseFloat(jupiterExpectancy.toFixed(2));
+    return jupiterExpectancy;
+  }
+
 }
