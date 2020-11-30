@@ -16,6 +16,18 @@ export default class planets {
     return mercuryExpectancy;
   }
 
+  getVenusAge() {
+    let venusAge = this.inputAge/0.62;
+    venusAge = parseFloat(venusAge.toFixed(2));
+    return venusAge;
+  }
+
+  getVenusExpectancy() {
+    let venusExpectancy = this.inputExpectancy/0.62;
+    venusExpectancy = parseFloat(venusExpectancy.toFixed(2));
+    return venusExpectancy;
+  }
+
   getMarsAge() {
     let marsAge = this.inputAge/1.88;
     marsAge = parseFloat(marsAge.toFixed(2));
