@@ -44,12 +44,12 @@ describe('planets', () => {
     test('should take user age, and return a converted value based on a jupiter year', () => {
       const Planet = new planets(21, 80);
       const jupiterAge = Planet.getJupiterAge();
-      expect(jupiterAge).toEqual(87.5);
+      expect(jupiterAge).toEqual(1.77);
     });
 
     test('should take user life expectancy, and return a converted value based on a jupiter year', () => {
       const Planet = new planets(21, 80);
       const jupiterExpectancy = Planet.getJupiterExpectancy();
-      expect(jupiterExpectancy).toEqual(333.33);
+      expect(jupiterExpectancy).toEqual(6.75);
     });
 });
