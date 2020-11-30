@@ -23,7 +23,6 @@ This site was built for an independent Friday project at _Epicodus_. It takes th
 * NPM
 * eslint
 * babel
-* dotenv
 * webpack
 
 # Specs
