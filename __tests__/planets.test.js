@@ -2,13 +2,18 @@
 // age and life expectancy are user input
 // year length is handled by each planet method
 
-import planet from "./../src/js/planets.js";
+import planets from "./../src/js/planets.js";
 
 describe('planets', () => {
-  beforeEach(() => {
-    let Planet = new planet(21, 80)
-  });
-    test('should take user age and l.e., and return them based on a mars year', () => {
-      expect(Planet.mars).toEqual(11.1, 42.5);
+  test('should take user age, and return a converted value based on a mars year', () => {
+      const Planet = new planets(21, 80);
+      const marsAge = Planet.getMarsAge();
+      expect(marsAge).toEqual(11.17);
+    });
+
+  test('should take user life expectancy, and return a converted value based on a mars year', () => {
+      const Planet = new planets(21, 80);
+      const marsExpectancy = Planet.getMarsExpectancy();
+      expect(marsExpectancy).toEqual(42.55);
     });
 });
