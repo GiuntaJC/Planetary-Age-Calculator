@@ -17,6 +17,18 @@ describe('planets', () => {
       expect(marsExpectancy).toEqual(42.55);
     });
 
+    test('should take user age, and return a converted value based on a venus year', () => {
+        const Planet = new planets(21, 80);
+        const venusAge = Planet.getVenusAge();
+        expect(venusAge).toEqual(33.87);
+      });
+  
+    test('should take user life expectancy, and return a converted value based on a venus year', () => {
+        const Planet = new planets(21, 80);
+        const venusExpectancy = Planet.getVenusExpectancy();
+        expect(venusExpectancy).toEqual(129.03);
+      });
+
     test('should take user age, and return a converted value based on a mercury year', () => {
       const Planet = new planets(21, 80);
       const mercuryAge = Planet.getMercuryAge();
