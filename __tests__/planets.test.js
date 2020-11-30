@@ -52,4 +52,12 @@ describe('planets', () => {
       const jupiterExpectancy = Planet.getJupiterExpectancy();
       expect(jupiterExpectancy).toEqual(6.75);
     });
+
+    test('Should check if user has lived past their l.e. and if so, return by how many years', () => {
+      const Planet = new planets(81, 80);
+      const marsAge = Planet.getMarsAge();
+      const marsExpectancy = Planet.getMarsExpectancy();
+      const yearsPastExpectancy = Planet.livedPastExpectancy(marsAge, marsExpectancy);
+      expect(yearsPastExpectancy).toEqual(0.54);
+    });
 });
