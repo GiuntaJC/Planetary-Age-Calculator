@@ -48,6 +48,9 @@ export default class planets {
     if(planetAge > planetExpectancy) {
       const yearsPastExpectancy = parseFloat((planetAge - planetExpectancy).toFixed(2));
       return yearsPastExpectancy;
+    } else {
+      const planetaryYearsLeft = parseFloat((planetExpectancy - planetAge).toFixed(2));
+      return planetaryYearsLeft;
     }
   }
 
