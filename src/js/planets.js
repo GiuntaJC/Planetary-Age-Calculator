@@ -44,14 +44,22 @@ export default class planets {
     return jupiterExpectancy;
   }
 
-  livedPastExpectancy(planetAge, planetExpectancy) {
+  checkAgeAgainstExpectancy(planetAge, planetExpectancy) {
     if(planetAge > planetExpectancy) {
-      const yearsPastExpectancy = parseFloat((planetAge - planetExpectancy).toFixed(2));
-      return yearsPastExpectancy;
+      return true;
     } else {
-      const planetaryYearsLeft = parseFloat((planetExpectancy - planetAge).toFixed(2));
-      return planetaryYearsLeft;
+      return false;
     }
   }
 
+
+  livedPastExpectancy(planetAge, planetExpectancy) {
+      const yearsPastExpectancy = parseFloat((planetAge - planetExpectancy).toFixed(2));
+      return yearsPastExpectancy;
+  }
+
+  yearsLeftOnPlanet(planetAge, planetExpectancy) {
+      const planetaryYearsLeft = parseFloat((planetExpectancy - planetAge).toFixed(2));
+      return planetaryYearsLeft;
+  }
 }

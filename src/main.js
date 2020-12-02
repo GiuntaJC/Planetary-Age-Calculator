@@ -15,9 +15,13 @@ $("#ageForm").submit((event) => {
   listOfPlanets.forEach((planet) => {
     $("#output").append("<p>Your age on " + planet + " is " + Planet[`get${planet}Age`]() + "</p>");
     $("#output").append("<p>Your life expectancy on " + planet + " is " + Planet[`get${planet}Expectancy`]() + "</p>");
-    const expectancyYears = Planet.livedPastExpectancy(Planet[`get${planet}Age`](), Planet[`get${planet}Expectancy`]());
-    if(expectancyYears > 0) {
+    const ageGreaterThanExpected = Planet.checkAgeAgainstExpectancy(Planet[`get${planet}Age`](), Planet[`get${planet}Expectancy`]());
+    if(ageGreaterThanExpected == true) {
+      const expectancyYears = Planet.livedPastExpectancy(Planet[`get${planet}Age`](), Planet[`get${planet}Expectancy`]());
       $("#output").append("<p>You have lived " + expectancyYears + " past your life expectancy on "+ planet + "!</p>");
+    } else {
+      const expectancyYears = Planet.yearsLeftOnPlanet(Planet[`get${planet}Age`](), Planet[`get${planet}Expectancy`]());
+      $("#output").append("<p>You have " + expectancyYears + " years expected left on  "+ planet + "!</p>");
     }
     $("#output").append("<br>");
   });
