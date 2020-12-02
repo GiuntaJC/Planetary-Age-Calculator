@@ -53,7 +53,15 @@ describe('planets', () => {
       expect(jupiterExpectancy).toEqual(6.75);
     });
 
-    test('Should check if user has lived past their l.e. and if so, return by how many years', () => {
+    test('Should check if user has lived past their l.e. and if so, return true, else false', () => {
+      const Planet = new planets(81, 80);
+      const marsAge = Planet.getMarsAge();
+      const marsExpectancy = Planet.getMarsExpectancy();
+      const ageGreaterThanExpected = Planet.checkAgeAgainstExpectancy(marsAge, marsExpectancy);
+      expect(ageGreaterThanExpected).toEqual(true);
+    });
+
+    test('Should return planetary age - planetary expectancy', () => {
       const Planet = new planets(81, 80);
       const marsAge = Planet.getMarsAge();
       const marsExpectancy = Planet.getMarsExpectancy();
@@ -61,11 +69,11 @@ describe('planets', () => {
       expect(yearsPastExpectancy).toEqual(0.54);
     });
 
-    test('Should check if user has lived past their l.e. and if not, return how many they have left', () => {
+    test('Should return planetary expectancy - planetary age', () => {
       const Planet = new planets(21, 80);
       const marsAge = Planet.getMarsAge();
       const marsExpectancy = Planet.getMarsExpectancy();
-      const yearsPastExpectancy = Planet.livedPastExpectancy(marsAge, marsExpectancy);
+      const yearsPastExpectancy = Planet.yearsLeftOnPlanet(marsAge, marsExpectancy);
       expect(yearsPastExpectancy).toEqual(31.38);
     });
 });
